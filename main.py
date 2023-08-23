@@ -1,18 +1,17 @@
 import pandas as pd
-# from IPython.display import display, HTML
 
-# Load data from a CSV file
+# Load data from the CSV file
 df = pd.read_csv('Nearabl.Sample.Data_main_us-500.csv')
 
 # Adds 1 to the default numeric row numbers
 df.index = df.index + 1
 
-print("\nOptions for search field include:")
-print(
-  "first_name, last_name, company_name, address, city, county, state, zip, phone1, phone2, email, or web \n"
-)
+description = ('Search field options:\n'
+               'first_name, last_name, company_name, address, city, county,'
+               ' state, zip, phone1, phone2, email, or web\n')
+print(description)
 
-#Asks which of the search fields to look at
+#Asks which search field to look at
 column_to_search = input("Enter the search field: ")
 
 #Asks what search term to look out for
